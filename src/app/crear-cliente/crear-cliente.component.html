@@ -1,0 +1,19 @@
+<mat-card>
+    <span>Crear Nuevo Cliente</span>
+    <form [formGroup]="clienteForm" class="crear-cliente-form">
+        <mat-form-field class="crear-cliente-field">
+            <input matInput placeholder="Nombre" formControlName="nombre">
+        </mat-form-field>
+        <mat-form-field class="crear-cliente-field">
+            <input matInput placeholder="Apellidos" formControlName="apellidos">
+        </mat-form-field>
+        <mat-form-field class="crear-cliente-field">
+            <input matInput placeholder="Telefono" formControlName="telefono">
+        </mat-form-field>
+        <mat-form-field class="crear-cliente-field">
+            <input matInput placeholder="Direccion" formControlName="direccion">
+        </mat-form-field>
+
+        <button mat-raised-button class="crear-form-btn " [disabled]="!clienteForm.valid" (click)="onSubmit()">Crear Nuevo</button>
+    </form>
+</mat-card>

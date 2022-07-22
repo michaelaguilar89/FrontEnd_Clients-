@@ -1,0 +1,27 @@
+<h2 mat-dialog-title>Actualizar Cliente</h2>
+
+<mat-dialog-content [formGroup]="form">
+    <mat-form-field class="crear-cliente-field">
+        <input matInput placeholder="Nombre del Cliente" formControlName="nombre">
+    </mat-form-field>
+    <br>
+    <mat-form-field class="crear-cliente-field">
+        <input matInput placeholder="Apellidos del Cliente" formControlName="apellidos">
+    </mat-form-field>
+    <br>
+    <mat-form-field class="crear-cliente-field">
+        <input matInput placeholder="Telefono del Cliente" formControlName="telefono">
+    </mat-form-field>
+    <br>
+    <mat-form-field class="crear-cliente-field">
+        <input matInput placeholder="Direccion del Cliente" formControlName="direccion">
+    </mat-form-field>
+    <br>
+
+</mat-dialog-content>
+
+<mat-dialog-actions>
+
+    <button mat-raised-button color="primary" (click)="guardar()">Guardar Cambios</button>
+    <button mat-raised-button color="accent" (click)="cerrar()">Cancelar</button>
+</mat-dialog-actions>
