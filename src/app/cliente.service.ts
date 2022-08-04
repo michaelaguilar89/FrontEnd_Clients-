@@ -7,7 +7,8 @@ import { ClienteInterface } from './Interfaces/ClienteInterface';
 })
 export class ClienteService {
 
-  baseUrl :string ='https://localhost:5001/api/Clientes/';
+ // baseUrl :string ='https://localhost:5001/api/Clientes/';
+    baseUrl:string = 'http://backendclients.somee.com/api/Clientes/';
   constructor(private http: HttpClient) { 
 
 

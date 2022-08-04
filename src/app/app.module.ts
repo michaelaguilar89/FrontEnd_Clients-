@@ -27,8 +27,11 @@ import { FormsModule } from '@angular/forms';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatIconModule} from '@angular/material/icon';
 
+
 import { AcercaDeComponent } from './acerca-de/acerca-de.component';
 import { ContactComponent } from './contact/contact.component';
+
+
 
 @NgModule({
   declarations: [
@@ -49,10 +52,10 @@ import { ContactComponent } from './contact/contact.component';
     BrowserModule,
     AppRoutingModule,HttpClientModule, BrowserAnimationsModule,MatButtonModule,
     MatTableModule, ReactiveFormsModule,MatInputModule,MatCardModule,MatToolbarModule,
-    MatListModule, MatDialogModule,FormsModule,MatPaginatorModule,MatIconModule
-  ],
+    MatListModule, MatDialogModule,FormsModule,MatPaginatorModule,MatIconModule ],
+    
   entryComponents:[ActualizarClienteComponent],
-  providers: [ClienteService,AuthService],
+  providers: [ClienteService,AuthService, ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

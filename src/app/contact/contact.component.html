@@ -2,33 +2,71 @@
 
     <p class="principal">
         Hola
-    </p>
-    <p class="principal">
-        Si deseas contactarme puedes escribirme un email
+        <br> Si deseas contactarme puedes escribirme un email
     </p>
 
 
-    <form class="example-form" action="https://formsubmit.co/mchlaguilar051gmail.com">
+    <form class="example-form" [formGroup]="formContact" (submit)="sendEmail($event)">
 
 
         <mat-form-field class="example-full-width" appearance="fill">
             <mat-label>Nombre</mat-label>
-            <input type="text" name="Nombre" required matInput placeholder="Mi nombre aqui">
+            <input type="text" formControlName="name" name="name" required matInput placeholder="Mi nombre aqui">
+
         </mat-form-field>
-        <br>
+        <p>
+            <span *ngIf="this.formContact.get('name')?.errors?.['required']">
+                (El nombre no puede quedar vacío)
+              </span>
+            <span *ngIf="this.formContact.get('name')?.errors?.['minlength']">
+                (Debe tener como mínimo 3 caracteres)
+              </span>
+            <span *ngIf="this.formContact.get('name')?.errors?.['maxlength']">
+                (Debe tener como maximo 50 caracteres)
+              </span>
+        </p>
+
+
         <mat-form-field class="example-full-width" appearance="fill">
             <mat-label>Email</mat-label>
-            <input type="text" name="Email" required matInput placeholder="Mi email aqui">
+            <input type="email" formControlName="email" name="email" required matInput placeholder="Mi email aqui">
         </mat-form-field>
+        <p>
+            <span *ngIf="this.formContact.get('email')?.errors?.['required']">
+                (Este espacio es requerido)
+            </span>
+            <span *ngIf="this.formContact.get('email')?.errors?.['email']">
+                (El email es incorrecto)
+            </span>
+        </p>
         <mat-form-field class="example-full-width" appearance="fill">
             <mat-label>Telefono</mat-label>
-            <input type="text" name="Telefono" required matInput placeholder="Mi telefono aqui">
+            <input type="text" formControlName="phone" name="phone" required matInput placeholder="Mi telefono aqui">
         </mat-form-field>
+        <p>
+            <span *ngIf="this.formContact.get('phone')?.errors?.['required']">
+                (Este numero telefonico es requerido)
+            </span>
+            <span *ngIf="this.formContact.get('phone')?.errors?.['minLength']">
+                (Este numero telefonico ser minimo de 8 caracteres)
+            </span>
+        </p>
 
         <mat-form-field class="example-full-width" appearance="fill">
             <mat-label>Mensaje</mat-label>
-            <textarea type="text-area" name="Mensaje" required matInput placeholder="Mi mensaje aqui"></textarea>
+            <textarea type="text-area" formControlName="message" name="message" required matInput placeholder="Mi mensaje aqui"></textarea>
         </mat-form-field>
+        <p>
+            <span *ngIf="this.formContact.get('message')?.errors?.['required']">
+                (El nombre no puede quedar vacío)
+              </span>
+            <span *ngIf="this.formContact.get('message')?.errors?.['minlength']">
+                (Debe tener como mínimo 10 caracteres)
+              </span>
+            <span *ngIf="this.formContact.get('message')?.errors?.['maxlength']">
+                (Debe tener como maximo 250 caracteres)
+              </span>
+        </p>
 
         <button mat-raised-button color="primary" type="submit">Send</button>
 
