@@ -26,7 +26,7 @@ import { LoginComponent } from './login/login.component'
 import { FormsModule } from '@angular/forms';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatIconModule} from '@angular/material/icon';
-
+import { RouterLink } from '@angular/router';
 
 import { AcercaDeComponent } from './acerca-de/acerca-de.component';
 import { ContactComponent } from './contact/contact.component';
