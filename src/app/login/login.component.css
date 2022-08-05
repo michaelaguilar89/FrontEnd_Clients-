@@ -1,3 +1,7 @@
+.container1 {
+    min-height: 75vh
+}
+
 mat-card {
     margin-top: 5%;
     margin-left: 35%;

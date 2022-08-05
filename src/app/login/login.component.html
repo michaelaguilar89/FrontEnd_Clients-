@@ -1,19 +1,21 @@
-<mat-card>
-    <span>
-        Login
-    </span><br>
-    <form [formGroup]="loginForm">
-        <mat-form-field>
-            <input matInput placeholder="UserName" minlength="3" formControlName="userName">
-        </mat-form-field>
-        <br>
-        <mat-form-field>
-            <input matInput type="password" placeholder="Password" formControlName="password">
-        </mat-form-field>
-        <br>
-        <mat-card-actions>
-            <button class="myButton" color="primary" [disabled]="!loginForm.valid" mat-raised-button (click)="login()">Login</button>
-        </mat-card-actions>
-    </form>
+<div class="container1">
+    <mat-card>
+        <span>
+            Login
+        </span><br>
+        <form [formGroup]="loginForm">
+            <mat-form-field>
+                <input matInput placeholder="UserName" minlength="3" formControlName="userName">
+            </mat-form-field>
+            <br>
+            <mat-form-field>
+                <input matInput type="password" placeholder="Password" formControlName="password">
+            </mat-form-field>
+            <br>
+            <mat-card-actions>
+                <button class="myButton" color="primary" [disabled]="!loginForm.valid" mat-raised-button (click)="login()">Login</button>
+            </mat-card-actions>
+        </form>
 
-</mat-card>
+    </mat-card>
+</div>

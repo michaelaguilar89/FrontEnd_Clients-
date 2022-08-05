@@ -1,9 +1,9 @@
 <mat-toolbar color="primary">
-    <button mat-button routerLink="/">App</button>
+    <button mat-button *ngIf="auth.IsAutenticado" routerLink="/">App</button>
     <button mat-button *ngIf="auth.IsAutenticado" routerLink="clientes">Clientes</button>
     <button mat-button *ngIf="auth.IsAutenticado" routerLink="crear-cliente">Nuevo Cliente</button>
-    <button mat-button *ngIf="auth.IsAutenticado" routerLink="contact">Contactame</button>
-    <button mat-button *ngIf="auth.IsAutenticado" routerLink="acerca">Acerca de </button>
+    <button mat-button routerLink="contact">Contactame</button>
+    <button mat-button routerLink="acerca">Acerca de </button>
     <span style="flex: 1 1 auto;"></span>
     <button mat-button *ngIf="auth.IsAutenticado">Bienvenido {{auth.getUserName}}</button>
     <button mat-button *ngIf="auth.IsAutenticado" (click)="logOut()">LogOut</button>

@@ -1,43 +1,45 @@
-<p class="p1">Infomacion de los clientes </p>
+<div class="container1">
+    <p class="p1">Infomacion de los clientes </p>
 
-<mat-form-field class="filtroBusqueda" [hidden]="!dataSource">
-    <input matInput (keyup)="aplicarFiltro($event)" placeholder="Filtro de Busqueda" autocomplete="off">
-</mat-form-field>
+    <mat-form-field class="filtroBusqueda" [hidden]="!dataSource">
+        <input matInput (keyup)="aplicarFiltro($event)" placeholder="Filtro de Busqueda" autocomplete="off">
+    </mat-form-field>
 
-<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
-    <ng-container matColumnDef="nombre">
-        <th mat-header-cell *matHeaderCellDef> Nombre </th>
-        <td mat-cell *matCellDef="let element"> {{element.nombre}} </td>
-    </ng-container>
-    <ng-container matColumnDef="apellidos">
-        <th mat-header-cell *matHeaderCellDef> Apellidos</th>
-        <td mat-cell *matCellDef="let element"> {{element.apellidos}} </td>
-    </ng-container>
-    <ng-container matColumnDef="direccion">
-        <th mat-header-cell *matHeaderCellDef> Direccion </th>
-        <td mat-cell *matCellDef="let element"> {{element.direccion}} </td>
-    </ng-container>
-    <ng-container matColumnDef="telefono">
-        <th mat-header-cell *matHeaderCellDef> Telefono </th>
-        <td mat-cell *matCellDef="let element"> {{element.telefono}} </td>
-    </ng-container>
+        <ng-container matColumnDef="nombre">
+            <th mat-header-cell *matHeaderCellDef> Nombre </th>
+            <td mat-cell *matCellDef="let element"> {{element.nombre}} </td>
+        </ng-container>
+        <ng-container matColumnDef="apellidos">
+            <th mat-header-cell *matHeaderCellDef> Apellidos</th>
+            <td mat-cell *matCellDef="let element"> {{element.apellidos}} </td>
+        </ng-container>
+        <ng-container matColumnDef="direccion">
+            <th mat-header-cell *matHeaderCellDef> Direccion </th>
+            <td mat-cell *matCellDef="let element"> {{element.direccion}} </td>
+        </ng-container>
+        <ng-container matColumnDef="telefono">
+            <th mat-header-cell *matHeaderCellDef> Telefono </th>
+            <td mat-cell *matCellDef="let element"> {{element.telefono}} </td>
+        </ng-container>
 
-    <ng-container matColumnDef="Acciones">
-        <th mat-header-cell *matHeaderCellDef> Acciones</th>
-        <td mat-cell *matCellDef="let element">
-            <button class="btnOptions" mat-raised-button color="primary" (click)="actualizarCliente(element)">
+        <ng-container matColumnDef="Acciones">
+            <th mat-header-cell *matHeaderCellDef> Acciones</th>
+            <td mat-cell *matCellDef="let element">
+                <button class="btnOptions" mat-raised-button color="primary" (click)="actualizarCliente(element)">
              <mat-icon color="white">edit</mat-icon>   Editar</button>
-            <button class="btnOptions" mat-raised-button color="warn" (click)="eliminarCliente(element)">
+                <button class="btnOptions" mat-raised-button color="warn" (click)="eliminarCliente(element)">
               <mat-icon color="red">delete</mat-icon>  Eliminar</button>
-        </td>
-    </ng-container>
+            </td>
+        </ng-container>
 
-    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
 
 
-</table>
+    </table>
 
-<mat-paginator [length]="100" [pageSize]="10" [pageSizeOptions]="[5, 10, 25, 100]">
-</mat-paginator>
+    <mat-paginator [length]="100" [pageSize]="10" [pageSizeOptions]="[5, 10, 25, 100]">
+    </mat-paginator>
+</div>
