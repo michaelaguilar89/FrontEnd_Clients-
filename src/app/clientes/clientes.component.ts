@@ -26,6 +26,7 @@ export class ClientesComponent implements OnInit {
 
   ngOnInit(): void {
 
+    
     this.service.getClientes().subscribe((data:any)=>{
       this.dataSource= new MatTableDataSource<ClienteInterface>(data.result as ClienteInterface[]);
       this.dataSource.paginator=this.paginator;
