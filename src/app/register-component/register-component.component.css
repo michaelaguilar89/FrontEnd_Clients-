@@ -1,6 +1,6 @@
 .conatiner1 {
-    min-height: 100vh;
-    width: auto;
+    min-height: 70%;
+    width: 50%;
 }
 
 mat-card {

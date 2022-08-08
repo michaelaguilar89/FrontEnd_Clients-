@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 export class AuthService {
 
  // baseUrl :string ='https://localhost:5001/api/Users/';
-    baseUrl : string='http://backendclients.somee.com/api/Users/'
+    baseUrl : string='https://www.backendclients.somee.com/api/Users/';
   
   
   constructor(private http:HttpClient,
