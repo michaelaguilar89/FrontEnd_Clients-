@@ -8,7 +8,7 @@ import { DeleteClienteComponent } from './delete-cliente/delete-cliente.componen
 import { LoginComponent } from './login/login.component';
 import { RegisterComponentComponent } from './register-component/register-component.component';
 const routes: Routes = [
-  {path:'',component:ClientesComponent},
+  {path:'',component:LoginComponent},
   {path:'clientes',component:ClientesComponent},
   {path:'crear-cliente',component:CrearClienteComponent},
   {path:'delete-cliente/:id',component:DeleteClienteComponent},
