@@ -14,7 +14,7 @@ export class HeaderComponent  {
  
   logOut(){
     
-    this.auth.logout();
+    this.auth.logout('gotoLogin');
    
     
   }

@@ -37,7 +37,7 @@ export class RegisterComponentComponent implements OnInit {
   ngOnInit(): void {
     if( localStorage.getItem('userName')!=null){
       alert('Cerrando sesion...');
-      this.service.logout();
+      this.service.logout('gotoRegister');
     }
 
   }

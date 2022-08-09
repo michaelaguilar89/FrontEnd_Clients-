@@ -34,7 +34,7 @@ export class LoginComponent implements OnInit  {
   ngOnInit(): void {
     if( localStorage.getItem('userName')!=null){
       alert('Cerrando sesion...');
-      this.service.logout();
+      this.service.logout('gotoLogin');
       //history.back();
     }
   }

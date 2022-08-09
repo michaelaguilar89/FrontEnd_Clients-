@@ -24,11 +24,20 @@ export class AuthService {
    }
 
 
-   logout(){
+   logout(ruta:string){
     console.log('LogOut en auth service');
     localStorage.removeItem('userName');
     localStorage.removeItem('token_value');
-    this.router.navigate(['login']);
+     if(ruta==='gotoLogin')
+     {
+          this.router.navigate(['login']);
+     }else{
+          if(ruta==='gotoRegister'){
+               this.router.navigate(['register']);
+          }
+     }
+    
+
     
 
    }
