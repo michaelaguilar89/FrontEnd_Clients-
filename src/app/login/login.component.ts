@@ -33,8 +33,9 @@ export class LoginComponent implements OnInit  {
   
   ngOnInit(): void {
     if( localStorage.getItem('userName')!=null){
-      alert('Acceso denegado,primero debe cerrar sesion para acceder a esta pagina');
-      history.back();
+      alert('Cerrando sesion...');
+      this.service.logout();
+      //history.back();
     }
   }
 
