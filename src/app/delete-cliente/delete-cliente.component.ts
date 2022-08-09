@@ -41,7 +41,8 @@ export class DeleteClienteComponent implements OnInit {
   confirmar(){
     this.service.deleteCliente(this.id).subscribe((data:any)=>{
       this.router.navigate(['clientes']);
-    })
+    },  (errorData)=>(alert('Error :' +errorData.error.displayMessages+' , '+errorData.error.errorsMessages))
+    )
    
   }
 

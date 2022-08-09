@@ -40,7 +40,9 @@ export class CrearClienteComponent implements OnInit  {
       alert("Cliente Creado");
       this.router.navigate(['clientes']);
       
-   })
+   } , (errorData)=>(alert('Error :' +errorData.error.displayMessages+' , '+errorData.error.errorsMessages))
+    
+   )
 
   }
 

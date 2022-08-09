@@ -53,7 +53,8 @@ export class ActualizarClienteComponent implements OnInit {
         window.location.reload();
        
         this.dialogRef.close();
-      })
+      }, (errorData)=>(alert('Error :' +errorData.error.displayMessages+' , '+errorData.error.errorsMessages))
+      )
     }
     cerrar(){
       console.log('Cerrando ventana from : Cerrar()')
