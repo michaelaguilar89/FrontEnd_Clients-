@@ -1,6 +1,6 @@
-.conatiner1 {
-    min-height: 70%;
-    width: 50%;
+.container1 {
+    position: center;
+    min-height: 75vh;
 }
 
 mat-card {
