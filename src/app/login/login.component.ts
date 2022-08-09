@@ -8,12 +8,14 @@ import { FormGroup,FormBuilder,Validators } from '@angular/forms';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent  {
+export class LoginComponent implements OnInit  {
 
   loginForm:FormGroup;
   constructor(private service:AuthService,
     private router:Router,
     private fb:FormBuilder) { 
+
+      a:Number;
 
       this.loginForm=this.fb.group({
         userName:['',Validators.compose([
@@ -29,7 +31,12 @@ export class LoginComponent  {
       })
     }
   
-  
+  ngOnInit(): void {
+    if( localStorage.getItem('userName')!=null){
+      alert('Acceso denegado,primero debe cerrar sesion para acceder a esta pagina');
+      history.back();
+    }
+  }
 
   login(){
       this.service.login(this.loginForm.value).subscribe((data:any) =>{

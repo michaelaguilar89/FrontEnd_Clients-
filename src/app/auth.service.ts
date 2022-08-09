@@ -29,7 +29,7 @@ export class AuthService {
     localStorage.removeItem('userName');
     localStorage.removeItem('token_value');
     this.router.navigate(['login']);
-    window.location.reload();
+    
 
    }
 
