@@ -26,3 +26,7 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 # FrontEnd_Clients
+Esta app FrontEnd esta construido en el FrameWork Angular , que utiliza Html 5, ccs , typescript para los componentes, realiza solicitudes atraves de HttpClientModule para mostrar los datos. Para este ervicio se ha utilizado un registro de nuevos usuarios y login para poder visualizar los datos, es decir si un usuario no se encuentra autenticado no va poder visualizar informacion o interacctuar con ella.
+Solamente las paginas de contactarme 'via email' y acerca 'que explica las tecnologias utilizadas' se pueden acceder sin estar logeado.
+
+El Backend de esta app esta en mi repositorio personal, y mismo lo he desarrollado en net core 6 ustilizando sql server.
