@@ -23,6 +23,12 @@ export class DeleteClienteComponent implements OnInit {
 
   ngOnInit(): void {
 
+    if(localStorage.getItem('token_value')===null){
+      this.router.navigate(['login']);
+      alert('Acceso denegado, usuario no identificado');
+      
+    }
+
     this.id= this.route.snapshot.paramMap.get('id');
     this.service.getClienteById(this.id).subscribe((data:any)=>{
       console.log(data);

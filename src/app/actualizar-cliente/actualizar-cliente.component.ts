@@ -37,7 +37,10 @@ export class ActualizarClienteComponent implements OnInit {
 
 
   ngOnInit(): void {
-   
+    if(localStorage.getItem('token_value')===null){
+      this.router.navigate(['login']);
+      alert('Acceso denegado, usuario no identificado');
+    }
   }
     guardar(){
      

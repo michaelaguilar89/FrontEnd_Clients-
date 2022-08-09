@@ -4,15 +4,19 @@ import { ClienteService } from '../cliente.service';
 //import { AppRoutingModule } from '../app-routing.module';
 import { Router} from '@angular/router';
 
+
 @Component({
   selector: 'app-crear-cliente',
   templateUrl: './crear-cliente.component.html',
   styleUrls: ['./crear-cliente.component.css']
 })
-export class CrearClienteComponent  {
+export class CrearClienteComponent implements OnInit  {
+
+ 
 
   constructor(private service:ClienteService,
-              private router:Router) { }
+              private router:Router,
+              ) { }
 
   clienteForm = new FormGroup({
     nombre : new FormControl('',Validators.required),
@@ -21,6 +25,13 @@ export class CrearClienteComponent  {
     telefono : new FormControl('',Validators.required)
   });
   
+  ngOnInit(): void {
+    if(localStorage.getItem('token_value')===null){
+      this.router.navigate(['login']);
+      alert('Acceso denegado, usuario no identificado');
+    }
+  }
+
   onSubmit(){
     console.log(this.clienteForm.value);
 
