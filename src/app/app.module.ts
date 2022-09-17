@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ClientesComponent } from './clientes/clientes.component';
@@ -30,6 +31,7 @@ import { RouterLink } from '@angular/router';
 
 import { AcercaDeComponent } from './acerca-de/acerca-de.component';
 import { ContactComponent } from './contact/contact.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 
 
@@ -46,7 +48,8 @@ import { ContactComponent } from './contact/contact.component';
     LoginComponent,
     
     AcercaDeComponent,
-         ContactComponent
+         ContactComponent,
+         PageNotFoundComponent
   ],
   imports: [
     BrowserModule,

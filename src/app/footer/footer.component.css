@@ -1,14 +1,16 @@
-.span2 {
-    margin-left: auto;
-}
-
-.mifooter {
+.flex-container {
     width: 100%;
-    margin-top: auto;
-    min-height: max-content;
+    flex-wrap: wrap;
 }
 
-.links {
+span {
+    margin-right: auto;
+}
+
+button,
+p {
+    flex: 1 1 auto;
     margin-left: 10px;
     margin-right: 10px;
+    flex-wrap: wrap;
 }
