@@ -10,8 +10,7 @@ import { LoginComponent } from './login/login.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { RegisterComponentComponent } from './register-component/register-component.component';
 const routes: Routes = [
-  {path:'',component:LoginComponent},
-  
+ 
   {path:'clientes',component:ClientesComponent},
   {path:'crear-cliente',component:CrearClienteComponent},
   {path:'delete-cliente/:id',component:DeleteClienteComponent},
@@ -19,6 +18,7 @@ const routes: Routes = [
   {path:'login',component:LoginComponent},
   {path:'contact',component:ContactComponent},
   {path:'acerca',component:AcercaDeComponent},
+  {path:'',redirectTo:'clientes'},
   {path:'**',component:PageNotFoundComponent}
 
 ];
