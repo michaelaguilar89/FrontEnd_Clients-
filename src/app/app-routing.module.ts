@@ -18,7 +18,7 @@ const routes: Routes = [
   {path:'login',component:LoginComponent},
   {path:'contact',component:ContactComponent},
   {path:'acerca',component:AcercaDeComponent},
-  {path:'',redirectTo:'clientes'},
+  {path:'',redirectTo:'login'},
   {path:'**',component:PageNotFoundComponent}
 
 ];

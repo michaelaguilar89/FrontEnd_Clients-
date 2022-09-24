@@ -51,7 +51,7 @@ export class ActualizarClienteComponent implements OnInit {
         this.router.navigate(['clientes']);
         
         
-      //  window.location.reload();
+      window.location.reload();
        
         this.dialogRef.close();
       }, (errorData)=>(alert('Error :' +errorData.error.displayMessages+' , '+errorData.error.errorsMessages))
